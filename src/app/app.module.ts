@@ -13,8 +13,8 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { TopicPillsComponent } from './topic-pills/topic-pills.component';
 import { WidgetListComponent } from './widget-list/widget-list.component';
 import {LessonService} from '../services/lesson-service';
-import { CourseTableComponent } from './course-table/course-table.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
+import { CourseGridComponent } from './course-grid/course-grid.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,8 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
     LessonTabsComponent,
     TopicPillsComponent,
     WidgetListComponent,
-    CourseTableComponent,
-    CourseViewerComponent
+    CourseViewerComponent,
+    CourseGridComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+
+<h3>
+  Course Grid
+  <a routerLink="/table/courses"
+     class="btn btn-outline-success float-right">Table
+  </a>
+</h3>
+
+<div class="card-deck">
+
+  <!-- iteratively produce card components -->
+  <div class="card" *ngFor="let course of courses">
+    <img class="card-img-top" src="https://picsum.photos/300/200">
+
+    <div class="card-body">
+      <a routerLink="/grid/courses/{{course._id}}/modules">
+        {{course.title}}
+      </a>
+    </div>
+  </div>
+
+</div>

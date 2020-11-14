@@ -82,5 +82,4 @@ export class CourseNavigatorComponent implements OnInit {
   //   this.moduleService.updateModule(module)
 
 
-
 }
