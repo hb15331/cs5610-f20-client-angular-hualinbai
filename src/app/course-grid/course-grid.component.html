@@ -1,6 +1,8 @@
 
+<div class="mt-2">
+
 <h3>
-  Course Grid
+  Whiteboard
   <a routerLink="/table/courses"
      class="btn btn-outline-success float-right">Table
   </a>
@@ -13,10 +15,13 @@
     <img class="card-img-top" src="https://picsum.photos/300/200">
 
     <div class="card-body">
+      <!-- navigate to courseViewerComponent -->
       <a routerLink="/grid/courses/{{course._id}}/modules">
         {{course.title}}
       </a>
     </div>
   </div>
+
+</div>
 
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ModuleService} from '../../services/module-service';
+import {CourseService} from '../../services/course-service';
 
 @Component({
   selector: 'app-module-list',
@@ -13,9 +14,14 @@ export class ModuleListComponent implements OnInit {
   // keep track of parent course for modules
   courseId = '';
   selectedModuleId = '';
+  course = {
+    title: ''
+  };
+  layout = '';
 
 
   constructor(private moduleService: ModuleService,
+              private courseService: CourseService,
               private activeRoute: ActivatedRoute) { }
 
 
@@ -26,11 +32,17 @@ export class ModuleListComponent implements OnInit {
     this.activeRoute.params.subscribe(params => {
       console.log(params);
       const courseId = params.cid;
+
       if (typeof courseId !== 'undefined') {
         this.moduleService.findModulesForCourse(courseId)
           .then(modules => this.modules = modules);
+        // fetch this particular course for rendering the course title
+        this.courseService.findCourseById(courseId)
+          .then(course => this.course = course);
       }
+
       this.courseId = courseId;
+      this.layout = params.layout;
       this.selectedModuleId = params.mid;
       console.log(this.selectedModuleId);
 

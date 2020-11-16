@@ -1,6 +1,9 @@
 
-<h3>Course Name</h3>
-<a routerLink="/table/courses">{{courseId}}</a>
+<h3>
+<!--  <a routerLink="/table/courses">X</a>-->
+  <a routerLink="/{{layout}}/courses">X</a>
+  {{course.title}}
+</h3>
 
 <ul class="list-group">
 
@@ -13,9 +16,14 @@
       [ngClass]="{'list-group-item-success': module._id === selectedModuleId}"
   >
 <!--    Should I also encode layout in url-->
-    <a routerLink="/table/courses/{{courseId}}/modules/{{module._id}}/lessons">
+<!--    <a routerLink="/table/courses/{{courseId}}/modules/{{module._id}}/lessons">-->
+<!--      {{module.title}}-->
+<!--    </a>-->
+
+    <a routerLink="/{{layout}}/courses/{{courseId}}/modules/{{module._id}}/lessons">
       {{module.title}}
     </a>
+
   </li>
 
 </ul>

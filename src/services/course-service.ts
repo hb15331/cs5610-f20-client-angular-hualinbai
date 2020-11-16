@@ -9,6 +9,12 @@ export class CourseService {
     fetch(coursesUrl).then(response => response.json())
 
 
+
+  findCourseById = (courseId) =>
+    fetch(`${coursesUrl}/${courseId}`).then(response => response.json())
+
+
+
   createCourse = () =>
     fetch(coursesUrl, {
       method: 'POST',
