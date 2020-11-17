@@ -10,6 +10,7 @@ import {LessonService} from '../../services/lesson-service';
 export class LessonTabsComponent implements OnInit {
 
   lessons = [];
+  // selectedLessonId = '';
 
   constructor(private lessonService: LessonService,
               private activeRoute: ActivatedRoute) { }
@@ -22,6 +23,7 @@ export class LessonTabsComponent implements OnInit {
         this.lessonService.findLessonsForModule(moduleId)
           .then(lessons => this.lessons = lessons);
       }
+      // this.selectedLessonId = params.lid;
     });
   }
 

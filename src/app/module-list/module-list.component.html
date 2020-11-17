@@ -15,10 +15,6 @@
       class="list-group-item"
       [ngClass]="{'list-group-item-success': module._id === selectedModuleId}"
   >
-<!--    Should I also encode layout in url-->
-<!--    <a routerLink="/table/courses/{{courseId}}/modules/{{module._id}}/lessons">-->
-<!--      {{module.title}}-->
-<!--    </a>-->
 
     <a routerLink="/{{layout}}/courses/{{courseId}}/modules/{{module._id}}/lessons">
       {{module.title}}

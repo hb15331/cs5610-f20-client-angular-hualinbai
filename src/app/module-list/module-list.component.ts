@@ -30,7 +30,6 @@ export class ModuleListComponent implements OnInit {
     // subscribes to a callback function that will be invoked
     // everytime params is changed
     this.activeRoute.params.subscribe(params => {
-      console.log(params);
       const courseId = params.cid;
 
       if (typeof courseId !== 'undefined') {
@@ -44,7 +43,6 @@ export class ModuleListComponent implements OnInit {
       this.courseId = courseId;
       this.layout = params.layout;
       this.selectedModuleId = params.mid;
-      console.log(this.selectedModuleId);
 
       // this.courseId = params.cid;
       // if (typeof this.courseId !== 'undefined') {
