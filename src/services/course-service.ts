@@ -43,8 +43,4 @@ export class CourseService {
       }
     }).then(response => response.json())
 
-
-
-
-
 }

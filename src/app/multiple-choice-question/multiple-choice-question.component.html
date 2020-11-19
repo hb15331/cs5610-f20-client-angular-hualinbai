@@ -1,0 +1,19 @@
+
+<h5>{{question.question}}</h5>
+
+<ul class="list-group">
+
+  <li class="list-group-item"
+      *ngFor="let choice of question.choices">
+    <label>
+      <!-- mutually-exclusive: use question id as name of radio button -->
+      <input name="{{question._id}}" type="radio"/> {{choice}}
+    </label>
+  </li>
+
+</ul>
+
+<div class="mt-3">
+  <p>Your answer: </p>
+  <button class="btn btn-success">Grade</button>
+</div>

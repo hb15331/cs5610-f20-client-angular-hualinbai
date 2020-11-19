@@ -15,6 +15,12 @@ import { WidgetListComponent } from './widget-list/widget-list.component';
 import {LessonService} from '../services/lesson-service';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { CourseGridComponent } from './course-grid/course-grid.component';
+import {QuizService} from '../services/quiz-service';
+import {QuestionService} from '../services/question-service';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,11 @@ import { CourseGridComponent } from './course-grid/course-grid.component';
     TopicPillsComponent,
     WidgetListComponent,
     CourseViewerComponent,
-    CourseGridComponent
+    CourseGridComponent,
+    QuizzesComponent,
+    QuizComponent,
+    TrueFalseQuestionComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,7 @@ import { CourseGridComponent } from './course-grid/course-grid.component';
     FormsModule
   ],
   providers: [
-    CourseService, ModuleService, LessonService
+    CourseService, ModuleService, LessonService, QuizService, QuestionService
   ],
   bootstrap: [AppComponent]
 })

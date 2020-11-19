@@ -4,6 +4,8 @@ import {CourseNavigatorComponent} from './course-navigator/course-navigator.comp
 import {CourseListComponent} from './course-list/course-list.component';
 import {CourseViewerComponent} from './course-viewer/course-viewer.component';
 import {CourseGridComponent} from './course-grid/course-grid.component';
+import {QuizzesComponent} from './quizzes/quizzes.component';
+import {QuizComponent} from './quiz/quiz.component';
 
 const routes: Routes = [
 
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: ':layout/courses/:cid/modules/:mid/lessons', component: CourseViewerComponent},
   {path: ':layout/courses/:cid/modules/:mid/lessons/:lid/topics', component: CourseViewerComponent},
 
+  {path: ':layout/courses/:cid/quizzes', component: QuizzesComponent},
+  {path: ':layout/courses/:cid/quizzes/:qid', component: QuizComponent}
 
 ];
 
