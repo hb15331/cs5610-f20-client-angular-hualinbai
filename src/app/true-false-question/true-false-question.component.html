@@ -1,24 +1,81 @@
 
-<h5>{{question.question}}</h5>
+<h5>
+  {{question.question}}
+  <span class="text-success"
+        [hidden]="!grading || (question.answer !== question.correct)">
+    Correct
+  </span>
+  <span class="text-danger"
+        [hidden]="!grading || (question.answer === question.correct)">
+    Wrong
+  </span>
+</h5>
 
 <ul class="list-group">
 
-  <li class="list-group-item">
+  <li class="list-group-item"
+      [ngClass]="{
+      'list-group-item-danger': grading && question.answer === 'true' && question.correct === 'false',
+      'list-group-item-success': grading && ((question.answer === 'true' && question.correct === 'true') ||
+      (question.answer === 'false' && question.correct === 'true'))
+      }">
+
     <label>
-<!-- mutually-exclusive: use question id as name of radio button -->
-      <input name="{{question._id}}" type="radio"/> TRUE
+      <!-- mutually-exclusive: use question id as name of radio button -->
+      <input
+        name="{{question._id}}"
+        type="radio"
+        value="true"
+        [(ngModel)]="question.answer"/> TRUE
     </label>
+
+    <span [hidden]="!(grading && ((question.answer === 'true' && question.correct === 'true') ||
+      (question.answer === 'false' && question.correct === 'true')))" class="float-right">
+      Correct
+    </span>
+
+    <span [hidden]="!(grading && question.answer === 'true' && question.correct === 'false')" class="float-right">
+      Wrong
+    </span>
+
+
   </li>
 
-  <li class="list-group-item">
+  <li class="list-group-item"
+      [ngClass]="{
+      'list-group-item-danger': grading && question.answer === 'false' && question.correct === 'true',
+      'list-group-item-success': grading && ((question.answer === 'false' && question.correct === 'false') ||
+      (question.answer === 'true' && question.correct === 'false'))
+      }">
+
     <label>
-      <input name="{{question._id}}" type="radio"/> FALSE
+      <input
+        name="{{question._id}}"
+        type="radio"
+        value="false"
+        [(ngModel)]="question.answer"/> FALSE
     </label>
+
+
+    <span [hidden]="!(grading && ((question.answer === 'false' && question.correct === 'false') ||
+      (question.answer === 'true' && question.correct === 'false')))" class="float-right">
+      Correct
+    </span>
+
+    <span [hidden]="!(grading && question.answer === 'false' && question.correct === 'true')" class="float-right">
+      Wrong
+    </span>
+
+
   </li>
 
 </ul>
 
 <div class="mt-3">
-  <p>Your answer: </p>
-  <button class="btn btn-success">Grade</button>
+  <p>Your answer: {{question.answer}}</p>
+
+  <button class="btn btn-success" (click)="grade()">
+    Grade
+  </button>
+
 </div>
