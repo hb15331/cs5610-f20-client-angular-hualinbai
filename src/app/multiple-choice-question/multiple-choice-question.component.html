@@ -1,19 +1,51 @@
 
-<h5>{{question.question}}</h5>
+<h5>
+  {{question.question}}
+<!--  {{question.answer}}-->
+<!--  {{checkAns()}}-->
+
+  <span class="text-success" [hidden]="!grading || !checkAns()">Correct</span>
+  <span class="text-danger" [hidden]="!grading || checkAns()">Wrong</span>
+
+</h5>
 
 <ul class="list-group">
 
   <li class="list-group-item"
-      *ngFor="let choice of question.choices">
+      *ngFor="let choice of question.choices"
+      [ngClass]="{
+      'list-group-item-success': grading && ((checkAns() && choice === question.correct) || (!checkAns() && choice === question.correct)),
+      'list-group-item-danger': grading && (!checkAns() && choice === question.answer)
+      }"
+      >
     <label>
       <!-- mutually-exclusive: use question id as name of radio button -->
-      <input name="{{question._id}}" type="radio"/> {{choice}}
+      <input name="{{question._id}}"
+             type="radio"
+             value="{{choice}}"
+             [(ngModel)]="question.answer"/> {{choice}}
     </label>
+
+
+    <span class="float-right"
+          [hidden]="!(grading && ((checkAns() && choice === question.correct) || (!checkAns() && choice === question.correct)))">
+      Correct
+    </span>
+
+    <span class="float-right"
+          [hidden]="!(grading && (!checkAns() && choice === question.answer))">
+      Wrong
+    </span>
+
   </li>
 
 </ul>
 
 <div class="mt-3">
-  <p>Your answer: </p>
-  <button class="btn btn-success">Grade</button>
+  <p>Your answer: {{question.answer}}</p>
+
+  <button class="btn btn-success" (click)="grade()">
+    Grade
+  </button>
+
 </div>

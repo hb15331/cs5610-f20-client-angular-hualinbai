@@ -16,6 +16,11 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   }
 
 
+  checkAns = () =>
+    // check whether user selected the correct answer
+    this.question.answer === this.question.correct
+
+
   constructor() { }
 
   ngOnInit(): void {

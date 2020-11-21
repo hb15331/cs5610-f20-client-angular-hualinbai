@@ -8,7 +8,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TrueFalseQuestionComponent implements OnInit {
 
-  // userAns = '';
 
   @Input()
   question = {_id: '', title: '', question: '', answer: '', correct: ''};
