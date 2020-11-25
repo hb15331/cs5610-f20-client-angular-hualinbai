@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 
-const coursesUrl = `http://wbdv-generic-server.herokuapp.com/api/hualin/courses`;
+const coursesUrl = `https://wbdv-generic-server.herokuapp.com/api/hualin/courses`;
 
 @Injectable()
 export class CourseService {
