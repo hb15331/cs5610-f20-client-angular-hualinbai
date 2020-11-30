@@ -16,5 +16,35 @@
   </li>
 </ul>
 
+<div>
+
+  <div class="my-3">
+  <button (click)="findAttemptsForQuizzes()" class="btn btn-success">View your grades</button>
+  </div>
+
+  <table class="table">
+
+  <thead>
+  <tr>
+    <th>Quiz title</th>
+    <th>Attempt scores</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let quizAttempts of quizzesAttempts">
+    <td>
+      {{quizAttempts.quizTitle}}
+    </td>
+    <td>
+      {{quizAttempts.quizScores}}
+    </td>
+  </tr>
+  </tbody>
+
+  </table>
+
+</div>
+
 
 
