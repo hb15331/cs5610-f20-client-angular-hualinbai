@@ -1,3 +1,13 @@
+# Project Title
+Course Management Website for Students
+
+# Description
+This repository maintains the UI part of a website where
+students can view their enrolled courses and complete a set of quizzes.
+
+The Node.js server is maintained in the repository:
+https://github.com/hb15331/cs5610-f20-server-node-hualinbai
+
 # Cs5610F20ClientAngularHualinbai
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
