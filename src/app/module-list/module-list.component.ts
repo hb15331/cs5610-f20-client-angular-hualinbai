@@ -44,12 +44,6 @@ export class ModuleListComponent implements OnInit {
       this.layout = params.layout;
       this.selectedModuleId = params.mid;
 
-      // this.courseId = params.cid;
-      // if (typeof this.courseId !== 'undefined') {
-      //   this.moduleService.findModulesForCourse(this.courseId)
-      //     .then(modules => this.modules = modules);
-      // }
-
     });
   }
 
