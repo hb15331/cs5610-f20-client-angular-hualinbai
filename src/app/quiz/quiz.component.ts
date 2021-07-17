@@ -26,12 +26,10 @@ export class QuizComponent implements OnInit {
       this.questionService.findQuestionsForQuiz(this.quizId)
         .then(questions => {
           this.questions = questions;
-          // console.log(this.questions);
         });
       this.quizService.findQuizById(this.quizId)
         .then(quiz => this.quiz = quiz);
     });
-    // console.log(this.questions);
   }
 
   submitQuiz = () => {
@@ -44,6 +42,5 @@ export class QuizComponent implements OnInit {
     }).then(response => response.json())
       .then(result => console.log(result));
   }
-
 
 }

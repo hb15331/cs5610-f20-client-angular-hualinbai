@@ -26,7 +26,7 @@ export class QuizzesComponent implements OnInit {
 
 
   findAttemptsForQuiz = (quizId) =>
-    fetch(`http://localhost:3000/api/quizzes/${quizId}/attempts`)
+    fetch(`https://whiteboard-student-server.herokuapp.com/api/quizzes/${quizId}/attempts`)
       .then(response => response.json())
       .then(quizAttempts => {
         const quizScores = quizAttempts.map(qa => Math.round(qa.score));
@@ -44,7 +44,6 @@ export class QuizzesComponent implements OnInit {
   findAttemptsForQuizzes = () => {
     this.quizzesAttempts = [];
     this.quizzes.map(quiz => this.findAttemptsForQuiz(quiz._id));
-    // console.log(this.quizzesAttempts);
   }
 
 
