@@ -8,12 +8,8 @@ export class CourseService {
   findAllCourses = () =>
     fetch(coursesUrl).then(response => response.json())
 
-
-
   findCourseById = (courseId) =>
     fetch(`${coursesUrl}/${courseId}`).then(response => response.json())
-
-
 
   createCourse = () =>
     fetch(coursesUrl, {
@@ -26,13 +22,10 @@ export class CourseService {
       }
     }).then(response => response.json())
 
-
   deleteCourse = (courseId) =>
     fetch(`${coursesUrl}/${courseId}`, {
       method: 'DELETE'
     }).then(response => response.json())
-
-
 
   updateCourse = (course) =>
     fetch(`${coursesUrl}/${course._id}`, {

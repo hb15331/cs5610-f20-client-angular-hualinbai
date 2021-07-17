@@ -13,10 +13,8 @@ export class CourseListComponent implements OnInit {
   // need courseId in html so should be a state variable
   courseId = '';
 
-
   constructor(private activatedRoute: ActivatedRoute,
               private courseService: CourseService) { }
-
 
   ngOnInit(): void {
     // listens to the changes in url
@@ -26,7 +24,6 @@ export class CourseListComponent implements OnInit {
 
     this.courseService.findAllCourses()
       .then(courses => this.courses = courses);
-
   }
 
 }
