@@ -8,8 +8,21 @@ quizzes which will then be graded on the server.
 
 ## :sparkles: Features
 :heavy_check_mark: &nbsp;&nbsp;
-Retrieve the courses, modules and lessons from an existing REST API and support 3
-different views - table, grid or list<br />
+Retrieve the courses, modules and lessons from our REST API and support table/grid/list
+view of data <br />
 :heavy_check_mark: &nbsp;&nbsp;
-Complete and submit a set of quizzes under each course, and then render the student's
-grading history on UI
+Complete a set of quizzes associated with each course and render the student's
+grading history after submissions
+
+## :rocket: Technologies
+- [Angular](https://angular.io/)
+- [Angular Router](https://angular.io/guide/router)
+- [Angular Router](https://getbootstrap.com/)
+
+## 👨🏻‍💻 Run Locally
+
+
+
+
+
+
