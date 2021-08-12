@@ -4,7 +4,10 @@ Here we built an SPA as a prototype of an online Learning
 Management System (LMS) called WhiteBoard.
 This project implemented the front end features from the student's view.
 It allows students to browse their course content and submit a set of class
-quizzes which will then be graded on the server.
+quizzes which will then be graded on the server. <br />
+
+Also see the repository for the Node server of this WhiteBoard app:
+https://github.com/hb15331/cs5610-f20-server-node-hualinbai
 
 ## :sparkles: Features
 :heavy_check_mark: &nbsp;&nbsp;
