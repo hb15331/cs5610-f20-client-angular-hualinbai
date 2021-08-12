@@ -1,37 +1,15 @@
-# Project Title
-Course Management Website for Students
+<!-- About the Project -->
+## 🎯 About
+Here we built an SPA as a prototype of an online Learning 
+Management System (LMS) called WhiteBoard.
+This project implemented the front end features from the student's view.
+It allows students to browse their course content and submit a set of class
+quizzes which will then be graded on the server.
 
-# Description
-This repository maintains the UI part of a website where
-students can view their enrolled courses and complete a set of quizzes.
-
-The Node.js server is maintained in the repository:
-https://github.com/hb15331/cs5610-f20-server-node-hualinbai
-
-# Cs5610F20ClientAngularHualinbai
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## :sparkles: Features
+:heavy_check_mark: &nbsp;&nbsp;
+Retrieve the courses, modules and lessons from an existing REST API and support 3
+different views - table, grid or list<br />
+:heavy_check_mark: &nbsp;&nbsp;
+Complete and submit a set of quizzes under each course, and then render the student's
+grading history on UI
