@@ -11,7 +11,7 @@ quizzes which will then be graded on the server.
 Retrieve the courses, modules and lessons from our REST API and support table/grid/list
 view of data <br />
 :heavy_check_mark: &nbsp;&nbsp;
-Complete a set of quizzes associated with each course and render the student's
+Complete a set of quizzes under each course and render the student's
 grading history after submissions <br />
 
 ## :rocket: Technologies
@@ -20,9 +20,14 @@ grading history after submissions <br />
 - [Bootstrap](https://getbootstrap.com/)
 
 ## 👨🏻‍💻 Run Locally
+- Install dependencies
+```bash
+  npm install
+```
 
-
-
-
+- Launch the app at localhost:8080
+```bash
+  node server.js
+```
 
 
