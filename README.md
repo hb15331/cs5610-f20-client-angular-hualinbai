@@ -12,12 +12,12 @@ Retrieve the courses, modules and lessons from our REST API and support table/gr
 view of data <br />
 :heavy_check_mark: &nbsp;&nbsp;
 Complete a set of quizzes associated with each course and render the student's
-grading history after submissions
+grading history after submissions <br />
 
 ## :rocket: Technologies
 - [Angular](https://angular.io/)
 - [Angular Router](https://angular.io/guide/router)
-- [Angular Router](https://getbootstrap.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
 ## 👨🏻‍💻 Run Locally
 
